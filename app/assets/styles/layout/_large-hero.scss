@@ -1,0 +1,41 @@
+.hero{
+    width:100vw;
+ }
+
+
+
+.large-hero{
+text-align:center;
+position:relative;
+&__text-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+}
+&__title{
+font-size:7.68rem;
+@extend %header-title; 
+
+}
+&__subtitle{
+    font-size:6rem;
+    @extend %header-title; 
+
+}
+&__description{
+    color:#333;
+    font-size:3rem;
+    font-weight:100;
+    max-width:48rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+}
+
+
+img{
+    max-width:100%;
+    display:block;
+}

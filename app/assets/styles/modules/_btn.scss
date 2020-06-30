@@ -1,0 +1,14 @@
+.btn{
+    background:var(--color-bluish);
+        color:#eee;
+     text-decoration:none;
+     padding:1.5rem 2rem;
+     border-radius:2rem;   
+ &--orange{
+ background:#F4A259;
+    }
+&--large{
+    padding:1.6rem 2.2rem;
+    font-size:1.8rem;
+}
+}

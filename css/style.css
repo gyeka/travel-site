@@ -1,0 +1,74 @@
+/* EXTENDS*/
+.large-hero__title, .large-hero__subtitle {
+  color: var(--color-bluish);
+  font-weight: 300;
+  margin: 0;
+}
+
+body {
+  font-family: 'roboto', sans-serif;
+}
+
+.hero {
+  width: 100vw;
+}
+
+.large-hero {
+  text-align: center;
+  position: relative;
+}
+
+.large-hero__text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.large-hero__title {
+  font-size: 7.68rem;
+}
+
+.large-hero__subtitle {
+  font-size: 6rem;
+}
+
+.large-hero__description {
+  color: #333;
+  font-size: 3rem;
+  font-weight: 100;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color-bluish:#5B8E7D;
+  --color-yellow:#F4E285;
+}
+
+.btn {
+  background: var(--color-bluish);
+  color: #eee;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+}
+
+.btn--orange {
+  background: #F4A259;
+}
+
+.btn--large {
+  padding: 1.6rem 2.2rem;
+  font-size: 1.8rem;
+}
