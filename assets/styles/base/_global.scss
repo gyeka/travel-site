@@ -1,0 +1,25 @@
+html {
+    font-size: 50%;
+
+    @include respond(small) {
+        font-size: 62.5%;
+    }
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+    background: #EEF5DB;
+    color: #e7e7e7;
+}
+
+
+img {
+    width: 100%;
+
+    height: auto;
+}
+
+:root {
+    --color-bluish: #5B8E7D;
+    --color-yellow: #F4E285;
+}

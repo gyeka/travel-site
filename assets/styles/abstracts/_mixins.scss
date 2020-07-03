@@ -1,0 +1,55 @@
+/*media queries*/
+
+/*
+@mixin respond-phone {
+    @media (min-width: $breakpoint-small) {
+        @content
+    }
+}
+
+*/
+
+$breakpoint-small:33.125em;
+$breakpoint-medium:50em;
+$breakpoint-large:75em;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==small {
+        @media (min-width: 33.125em) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==medium {
+        @media (min-width:50em) {
+            @content
+        }
+
+        ;
+
+    }
+
+    @if $breakpoint==large {
+        @media (min-width:75em) {
+            @content
+        }
+
+        ;
+    }
+}
+
+%header-title {
+    color: #eee;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+
+%section-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, minmax(10rem, 1fr)) 1fr;
+
+}

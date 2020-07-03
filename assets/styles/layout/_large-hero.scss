@@ -1,0 +1,83 @@
+.hero {
+    width: 100vw;
+}
+
+
+
+.large-hero {
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%, 0 100%);
+
+    &__text-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        display: block;
+        @extend %header-title;
+
+        @media (min-width: $breakpoint-small) {
+            font-size: 4.2rem;
+        }
+
+
+        @media (min-width: $breakpoint-large) {
+            font-size: 8.2rem;
+        }
+
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        @extend %header-title;
+
+        @media (min-width: $breakpoint-small) {
+            font-size: 4rem;
+        }
+
+
+        @media (min-width: $breakpoint-large) {
+            font-size: 7rem;
+        }
+
+    }
+
+    &__description {
+        color: #eed;
+        font-size: 1.6rem;
+        font-weight: 100;
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3rem;
+
+        @media (min-width: $breakpoint-small) {
+            font-size: 1.4rem;
+            margin-bottom: 5rem;
+        }
+
+        @media (min-width: $breakpoint-medium) {
+            font-size: 2.2rem;
+        }
+
+        @media (min-width: $breakpoint-large) {
+            font-size: 3rem;
+        }
+
+    }
+}
+
+
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
