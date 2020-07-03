@@ -53,3 +53,9 @@ $breakpoint-large:75em;
     grid-template-columns: 1fr repeat(4, minmax(10rem, 1fr)) 1fr;
 
 }
+
+
+/* margin:extends*/
+%heading-margin {
+    margin: 2rem 0;
+}

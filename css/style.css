@@ -13,6 +13,7 @@
   margin: 0;
 }
 
+/* margin:extends*/
 body {
   font-family: 'roboto', sans-serif;
 }
@@ -20,7 +21,7 @@ body {
 #our-beginning {
   color: #333;
   background: #BFD1E5;
-  padding: 16rem 2rem;
+  padding: 12rem 2rem;
   display: block;
 }
 
@@ -29,14 +30,13 @@ body {
     display: grid;
     grid-template-columns: 1fr repeat(4, minmax(10rem, 1fr)) 1fr;
     grid-template-rows: repeat 4, 1fr;
-    gap: 4rem 0;
+    gap: 8rem 0;
   }
 }
 
 .main__header--container {
   grid-column: 2/6;
   grid-row: 1/2;
-  text-align: center;
 }
 
 .subtitle {
@@ -45,35 +45,37 @@ body {
 
 @media (min-width: 33.125em) {
   .subtitle {
-    font-size: 2.6rem;
-  }
-}
-
-@media (min-width: 75em) {
-  .subtitle {
-    font-size: 3rem;
-  }
-}
-
-.main__subheader {
-  font-size: 1.8rem;
-}
-
-@media (min-width: 33.125em) {
-  .main__subheader {
     font-size: 2.8rem;
   }
 }
 
 @media (min-width: 75em) {
+  .subtitle {
+    font-size: 3.6rem;
+  }
+}
+
+.main__subheader {
+  font-weight: 300;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 33.125em) {
   .main__subheader {
-    font-size: 3.4rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .main__subheader {
+    font-size: 3rem;
   }
 }
 
 .main__image--1 {
   display: block;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 33.125em) {
@@ -102,6 +104,7 @@ body {
 @media (min-width: 75em) {
   .main__image--2 {
     grid-column: 2/3;
+    box-shadow: 15px 20px 0px 0px #FE621D;
   }
 }
 
@@ -121,6 +124,12 @@ body {
 @media (min-width: 75em) {
   .main-text__wrapper {
     grid-row: 3/5;
+  }
+}
+
+@media (min-width: 50em) {
+  .main-text__wrapper > h2 {
+    margin-top: 0;
   }
 }
 
@@ -216,7 +225,7 @@ img {
 .features {
   display: block;
   background: #53599A;
-  padding: 10rem 4rem;
+  padding: 8rem 4rem;
 }
 
 @media (min-width: 33.125em) {
@@ -307,22 +316,26 @@ img {
 
 .features__header {
   grid-column: 2/7;
-  margin: 0 auto 8rem auto;
+  margin: 0 auto 10rem auto;
   display: flex;
   align-items: center;
-  width: 35vw;
-  justify-content: space-evenly;
   grid-row: 1/2;
 }
 
+@media (min-width: 75em) {
+  .features__header {
+    width: 25vw;
+  }
+}
+
 .features__header--icon {
-  width: 10rem;
+  width: 8rem;
   margin-right: 2rem;
 }
 
 @media (min-width: 33.125em) {
   .features__header--icon {
-    width: 16rem;
+    width: 10rem;
   }
 }
 

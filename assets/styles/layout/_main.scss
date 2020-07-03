@@ -1,14 +1,14 @@
 #our-beginning {
     color: #333;
     background: #BFD1E5;
-    padding: 16rem 2rem;
+    padding: 12rem 2rem;
     display: block;
 
     @media (min-width: $breakpoint-small) {
         display: grid;
         grid-template-columns: 1fr repeat(4, minmax(10rem, 1fr)) 1fr;
         grid-template-rows: repeat (4, 1fr);
-        gap: 4rem 0;
+        gap: 8rem 0;
 
     }
 }
@@ -16,26 +16,11 @@
 .main__header--container {
     grid-column: 2/6;
     grid-row: 1/2;
-    text-align: center;
+
 }
 
 .subtitle {
     font-size: 2.2rem;
-
-
-    @media (min-width: $breakpoint-small) {
-        font-size: 2.6rem;
-    }
-
-
-    @media (min-width: $breakpoint-large) {
-        font-size: 3rem;
-    }
-
-}
-
-.main__subheader {
-    font-size: 1.8rem;
 
 
     @media (min-width: $breakpoint-small) {
@@ -44,14 +29,29 @@
 
 
     @media (min-width: $breakpoint-large) {
-        font-size: 3.4rem;
+        font-size: 3.6rem;
+    }
+
+}
+
+.main__subheader {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+
+    @media (min-width: $breakpoint-small) {
+        font-size: 2.4rem;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        font-size: 3rem;
     }
 
 }
 
 .main__image--1 {
     display: block;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     @include respond(small) {
         grid-column: 2/6;
@@ -63,13 +63,11 @@
     }
 }
 
-
-
-
 .main__image--2 {
     grid-column: 3/6;
     grid-row: 3/4;
     transform: translateX(-5rem);
+
 
     @include respond(small) {
         box-shadow: 15px 20px 0px 0px #6D9DC5;
@@ -77,7 +75,7 @@
 
     @include respond(large) {
         grid-column: 2/3;
-
+        box-shadow: 15px 20px 0px 0px #FE621D;
     }
 }
 
@@ -93,6 +91,13 @@
 
     @include respond(large) {
         grid-row: 3/5;
+    }
+
+    &>h2 {
+
+        @include respond(medium) {
+            margin-top: 0;
+        }
     }
 
     &--inner {
