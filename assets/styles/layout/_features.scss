@@ -39,33 +39,32 @@
         &--wrapper {
             display: flex;
             width: 100%;
-            transform: translateX(-4vw);
             margin-bottom: 2rem;
+            align-items: start;
 
             &--image {
 
-                width: 15rem;
+                width: 12rem;
                 height: 100%;
-                transform: translateY(4vw);
                 margin-right: 1.5vw;
+
 
                 @include respond(small) {
                     width: 22rem;
                     height: auto;
-                    transform: translateY(-14vw);
+
                 }
 
                 @include respond(medium) {
                     width: 24rem;
                     height: auto;
-
-                    transform: translateY(-10vw);
                 }
             }
 
             &--text {
                 color: #80DED9;
                 margin-left: 1rem;
+                transform: translateY(-4vw);
 
                 &>h3 {
                     font-size: 2rem;
@@ -98,7 +97,6 @@
     width: 35vw;
     justify-content: space-evenly;
     grid-row: 1/2;
-    color: #80DED9;
 
     &--icon {
         width: 10rem;
