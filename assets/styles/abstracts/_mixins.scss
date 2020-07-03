@@ -12,6 +12,7 @@
 $breakpoint-small:33.125em;
 $breakpoint-medium:50em;
 $breakpoint-large:75em;
+$breakpoint-xlarge: 85em;
 
 @mixin respond($breakpoint) {
     @if $breakpoint==small {
@@ -33,6 +34,15 @@ $breakpoint-large:75em;
 
     @if $breakpoint==large {
         @media (min-width:75em) {
+            @content
+        }
+
+        ;
+    }
+
+
+    @if $breakpoint==xlarge {
+        @media (min-width:85em) {
             @content
         }
 
