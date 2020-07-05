@@ -508,5 +508,18 @@ img {
 }
 
 footer {
-  background: salmon;
+  background: #53599A;
+  height: 10rem;
+  margin-top: 0;
+  display: grid;
+  place-items: center;
+}
+
+/*header*/
+header {
+  background: #53599A;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.4;
+  width: 100%;
 }
