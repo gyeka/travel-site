@@ -406,9 +406,42 @@ img {
 /*header*/
 header {
   background: #53599A;
-  opacity: 0.8;
+  opacity: 0.6;
+
 }
 
 .header-inner {
   display: flex;
+  margin: 0 12vw;
+  align-items: center;
+}
+
+.header-logo-wrapper,
+.nav-list {
+  flex: 1;
+}
+
+
+.header-logo {
+  background: #5B8E7D;
+
+}
+
+.nav-list {
+  display: flex;
+  width: 40vw;
+  justify-content: space-between;
+
+}
+
+.nav-list li {
+  list-style: none;
+
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
