@@ -314,44 +314,6 @@ img {
   font-weight: 300;
 }
 
-.features__header {
-  grid-column: 2/7;
-  margin: 4rem auto 16rem auto;
-  display: flex;
-  align-items: center;
-  grid-row: 1/2;
-}
-
-@media (min-width: 75em) {
-  .features__header {
-    width: 25vw;
-  }
-}
-
-.features__header--icon {
-  width: 8rem;
-  margin-right: 2rem;
-}
-
-@media (min-width: 33.125em) {
-  .features__header--icon {
-    width: 10rem;
-  }
-}
-
-.features__header--heading {
-  font-size: 2rem;
-  font-size: 3.2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-@media (min-width: 33.125em) {
-  .features__header--heading {
-    font-size: 2.41rem;
-  }
-}
-
 #testimonials {
   position: relative;
   background: linear-gradient(152deg, rgba(37, 37, 37, 0.952801) 0%, rgba(36, 38, 53, 0.555) 0%, rgba(17, 8, 44, 0.932) 100%);
