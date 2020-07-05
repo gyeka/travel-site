@@ -368,6 +368,8 @@ img {
   justify-self: center;
 }
 
+
+=======
 .testimonials__header--wrapper>h2 {
   font-size: 2.2rem;
   color: teal;
@@ -505,8 +507,10 @@ img {
   .btn--large {
     padding: 1.6rem 2.2rem;
   }
+
 }
 
 footer {
   background: salmon;
+
 }
