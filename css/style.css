@@ -2,6 +2,12 @@ html {
   font-size: 50%;
 }
 
+@media (min-width: 33.125em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
 body {
   font-family: 'roboto', sans-serif;
   background: #BFD1E5;
@@ -26,6 +32,29 @@ img {
 }
 
 /* margin:extends*/
+.btn {
+  background: var(--color-bluish);
+  color: #eee;
+  text-decoration: none;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+}
+
+.btn--orange {
+  background: #F4A259;
+}
+
+.btn--large {
+  padding: 1rem 1.8rem;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 33.125em) {
+  .btn--large {
+    padding: 1.6rem 2.2rem;
+  }
+}
+
 /*media queries*/
 .large-hero__title, .large-hero__subtitle {
   color: #eee;
@@ -34,11 +63,6 @@ img {
 }
 
 /* margin:extends*/
-header {
-  background: #222;
-  opacity: 0.6;
-}
-
 #our-beginning {
   color: #333;
   background: #BFD1E5;
@@ -458,25 +482,114 @@ footer {
   margin-left: 4rem;
 }
 
-.btn {
-  background: var(--color-bluish);
+header {
+  background: var(--color-blue);
+  opacity: .6;
+  display: grid;
+  height: 10vh;
+}
+
+.header--inner {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 50em) {
+  .header--inner {
+    margin: 0 10vw;
+    align-items: center;
+  }
+}
+
+.nav-list {
+  display: none;
+}
+
+.nav-list > li {
+  list-style: none;
+}
+
+.nav-list > li > a {
   color: #eee;
   text-decoration: none;
-  padding: 1.5rem 2rem;
-  border-radius: 2rem;
-}
-
-.btn--orange {
-  background: #F4A259;
-}
-
-.btn--large {
-  padding: 1rem 1.8rem;
   font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
-@media (min-width: 33.125em) {
-  .btn--large {
-    padding: 1.6rem 2.2rem;
+@media (min-width: 50em) {
+  .nav-list {
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    margin-left: 4rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .nav-list {
+    width: 45vw;
+    font-size: 1.6rem;
+  }
+}
+
+.header-logo {
+  display: inline-block;
+}
+
+@media (min-width: 75em) {
+  .header-logo {
+    flex: 1;
+  }
+}
+
+.logo {
+  background: var(--color-bluish);
+  padding: 2rem;
+}
+
+@media (min-width: 75em) {
+  .logo {
+    padding: 2em;
+  }
+}
+
+nav {
+  flex: 1;
+}
+
+.hamburger {
+  display: inline-block;
+  position: absolute;
+  right: 2rem;
+  top: 3.5rem;
+}
+
+@media (min-width: 50em) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.line {
+  border: 2.5px solid #eee;
+  color: #eee;
+}
+
+.line--1 {
+  width: 2rem;
+}
+
+.line--2 {
+  width: 3.5rem;
+  margin: 1rem 0;
+}
+
+.line--3 {
+  width: 5rem;
+}
+
+@media (min-width: 50em) {
+  .line {
+    display: none;
   }
 }

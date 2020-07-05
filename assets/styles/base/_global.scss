@@ -1,6 +1,9 @@
 html {
     font-size: 50%;
 
+    @media (min-width: 33.125em) {
+        font-size: 62.5%;
+    }
 
 }
 
@@ -25,6 +28,7 @@ img {
 
 $breakpoint-small:33.125em;
 $breakpoint-medium:50em;
+$breakpoint-mediumlarge:50em;
 $breakpoint-large:75em;
 $breakpoint-xlarge: 85em;
 
@@ -39,6 +43,15 @@ $breakpoint-xlarge: 85em;
 
     @if $breakpoint==medium {
         @media (min-width:50em) {
+            @content
+        }
+
+        ;
+
+    }
+
+    @if $breakpoint==mediumlarge {
+        @media (min-width:66.5em) {
             @content
         }
 

@@ -1,4 +1,110 @@
 header {
-    background: #222;
-    opacity: 0.6;
+    background: var(--color-blue);
+    opacity: .6;
+    display: grid;
+    height: 10vh
+}
+
+.header--inner {
+    display: flex;
+    justify-content: center;
+
+    @include respond(medium) {
+        margin: 0 10vw;
+        align-items: center;
+    }
+}
+
+
+.nav-list {
+    display: none;
+
+
+    &>li {
+        list-style: none;
+
+        &>a {
+            color: #eee;
+            text-decoration: none;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+    }
+
+    @include respond(medium) {
+        display: flex;
+        width: 60vw;
+        justify-content: space-between;
+        margin-left: 4rem;
+
+    }
+
+    @include respond(large) {
+        width: 45vw;
+        font-size: 1.6rem;
+    }
+
+}
+
+
+
+
+.header-logo {
+    display: inline-block;
+
+
+    @include respond(large) {
+        flex: 1;
+    }
+}
+
+.logo {
+
+    background: var(--color-bluish);
+    padding: 2rem;
+
+    @include respond(large) {
+        padding: 2em;
+    }
+
+}
+
+nav {
+    flex: 1;
+
+}
+
+.hamburger {
+    display: inline-block;
+    position: absolute;
+    right: 2rem;
+    top: 3.5rem;
+
+    @include respond(medium) {
+        display: none;
+    }
+}
+
+.line {
+
+    border: 2.5px solid #eee;
+    color: #eee;
+
+    &--1 {
+        width: 2rem;
+    }
+
+    &--2 {
+        width: 3.5rem;
+        margin: 1rem 0;
+    }
+
+    &--3 {
+        width: 5rem;
+
+    }
+
+    @include respond(medium) {
+        display: none;
+    }
 }
