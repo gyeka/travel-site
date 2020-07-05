@@ -1,13 +1,11 @@
 /*media queries*/
 
 
-@mixin respond-phone {
-    @media (min-width: $breakpoint-small) {
+@mixin respond-small {
+    @media (min-width: 33.125em) {
         @content
     }
 }
-
-
 
 $breakpoint-small:33.125em;
 $breakpoint-medium:50em;

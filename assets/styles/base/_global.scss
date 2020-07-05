@@ -1,9 +1,7 @@
 html {
     font-size: 50%;
 
-    @include respond(small) {
-        font-size: 62.5%;
-    }
+
 }
 
 body {
@@ -21,4 +19,66 @@ img {
 :root {
     --color-bluish: #5B8E7D;
     --color-yellow: #F4E285;
+}
+
+
+$breakpoint-small:33.125em;
+$breakpoint-medium:50em;
+$breakpoint-large:75em;
+$breakpoint-xlarge: 85em;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==small {
+        @media (min-width: 33.125em) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==medium {
+        @media (min-width:50em) {
+            @content
+        }
+
+        ;
+
+    }
+
+    @if $breakpoint==large {
+        @media (min-width:75em) {
+            @content
+        }
+
+        ;
+    }
+
+
+    @if $breakpoint==xlarge {
+        @media (min-width:85em) {
+            @content
+        }
+
+        ;
+    }
+}
+
+%header-title {
+    color: #eee;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+
+%section-grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, minmax(10rem, 1fr)) 1fr;
+
+}
+
+
+/* margin:extends*/
+%heading-margin {
+    margin: 2rem 0;
 }

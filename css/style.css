@@ -1,12 +1,32 @@
-/*media queries*/
-/*
-@mixin respond-phone {
-    @media (min-width: $breakpoint-small) {
-        @content
-    }
+html {
+  font-size: 50%;
 }
 
-*/
+body {
+  font-family: 'roboto', sans-serif;
+  background: #BFD1E5;
+  color: #e7e7e7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:root {
+  --color-bluish: #5B8E7D;
+  --color-yellow: #F4E285;
+}
+
+.large-hero__title,
+.large-hero__subtitle {
+  color: #eee;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* margin:extends*/
+/*media queries*/
 .large-hero__title,
 .large-hero__subtitle {
   color: #eee;
@@ -17,6 +37,7 @@
 /* margin:extends*/
 body {
   font-family: 'roboto', sans-serif;
+  background: salmon;
 }
 
 #our-beginning {
@@ -330,7 +351,6 @@ img {
   justify-self: center;
 }
 
-
 .testimonials__header--wrapper>h2 {
   font-size: 2.2rem;
   color: teal;
@@ -363,6 +383,12 @@ img {
     grid-template-columns: 4vw repeat(3, minmax(2rem, 1fr)) 4vw;
     gap: 0 4rem;
     margin: 12rem 0;
+  }
+}
+
+@media (min-width: 85em) {
+  .card-container {
+    grid-template-columns: 1fr repeat(3, minmax(2rem, 1fr)) 1fr;
   }
 }
 
@@ -421,32 +447,6 @@ img {
   margin-bottom: 4rem;
 }
 
-html {
-  font-size: 50%;
-}
-
-@media (min-width: 33.125em) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
-body {
-  font-family: 'roboto', sans-serif;
-  background: #BFD1E5;
-  color: #e7e7e7;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-:root {
-  --color-bluish: #5B8E7D;
-  --color-yellow: #F4E285;
-}
-
 .btn {
   background: var(--color-bluish);
   color: #eee;
@@ -468,57 +468,4 @@ img {
   .btn--large {
     padding: 1.6rem 2.2rem;
   }
-
-}
-
-footer {
-  background: #53599A;
-  height: 10rem;
-  margin-top: 0;
-  display: grid;
-  place-items: center;
-}
-
-
-/*header*/
-header {
-  background: #53599A;
-  opacity: 0.6;
-
-}
-
-.header-inner {
-  display: flex;
-  margin: 0 12vw;
-  align-items: center;
-}
-
-.header-logo-wrapper,
-.nav-list {
-  flex: 1;
-}
-
-
-.header-logo {
-  background: #5B8E7D;
-
-}
-
-.nav-list {
-  display: flex;
-  width: 40vw;
-  justify-content: space-between;
-
-}
-
-.nav-list li {
-  list-style: none;
-
-}
-
-.nav-list li a {
-  text-decoration: none;
-  color: #eee;
-  text-transform: uppercase;
-  font-size: 1.5rem;
 }
