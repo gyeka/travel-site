@@ -316,7 +316,7 @@ img {
 
 .features__header {
   grid-column: 2/7;
-  margin: 0 auto 10rem auto;
+  margin: 4rem auto 16rem auto;
   display: flex;
   align-items: center;
   grid-row: 1/2;
@@ -436,6 +436,10 @@ img {
 
 .card__text {
   padding: 0 2rem;
+  /*
+    display: flex;
+    flex-direction: column;
+*/
 }
 
 .card__text--header {
