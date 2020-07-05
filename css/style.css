@@ -16,10 +16,10 @@ img {
 :root {
   --color-bluish: #5B8E7D;
   --color-yellow: #F4E285;
+  --color-blue: #53599A;
 }
 
-.large-hero__title,
-.large-hero__subtitle {
+.large-hero__title, .large-hero__subtitle {
   color: #eee;
   font-weight: 300;
   margin: 0;
@@ -27,17 +27,16 @@ img {
 
 /* margin:extends*/
 /*media queries*/
-.large-hero__title,
-.large-hero__subtitle {
+.large-hero__title, .large-hero__subtitle {
   color: #eee;
   font-weight: 300;
   margin: 0;
 }
 
 /* margin:extends*/
-body {
-  font-family: 'roboto', sans-serif;
-  background: salmon;
+header {
+  background: #222;
+  opacity: 0.6;
 }
 
 #our-beginning {
@@ -150,12 +149,12 @@ body {
 }
 
 @media (min-width: 50em) {
-  .main-text__wrapper>h2 {
+  .main-text__wrapper > h2 {
     margin-top: 0;
   }
 }
 
-.main-text__wrapper--inner>p {
+.main-text__wrapper--inner > p {
   font-size: 1.6rem;
 }
 
@@ -315,23 +314,23 @@ img {
   transform: translateY(-4vw);
 }
 
-.features__item--wrapper--text>h3 {
+.features__item--wrapper--text > h3 {
   font-size: 2rem;
 }
 
 @media (min-width: 33.125em) {
-  .features__item--wrapper--text>h3 {
+  .features__item--wrapper--text > h3 {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 50em) {
-  .features__item--wrapper--text>h3 {
+  .features__item--wrapper--text > h3 {
     font-size: 2.6rem;
   }
 }
 
-.features__item--wrapper--text>p {
+.features__item--wrapper--text > p {
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -351,7 +350,7 @@ img {
   justify-self: center;
 }
 
-.testimonials__header--wrapper>h2 {
+.testimonials__header--wrapper > h2 {
   font-size: 2.2rem;
   color: teal;
 }
@@ -445,6 +444,18 @@ img {
 .card__text--paragraph {
   font-size: 1.6rem;
   margin-bottom: 4rem;
+}
+
+footer {
+  background: var(--color-blue);
+  height: 10vh;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+}
+
+.btn--footer {
+  margin-left: 4rem;
 }
 
 .btn {

@@ -1,0 +1,11 @@
+footer {
+    background: var(--color-blue);
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+}
+
+.btn--footer {
+    margin-left: 4rem;
+}
