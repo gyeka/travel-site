@@ -1,5 +1,6 @@
 .hero {
     width: 100vw;
+
 }
 
 
@@ -7,7 +8,12 @@
 .large-hero {
     text-align: center;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%, 0 100%);
+    z-index: -100;
+
+    @include respond(medium) {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%, 0 100%);
+    }
+
 
     &__text-content {
         position: absolute;
@@ -15,6 +21,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        width: 90%;
 
     }
 

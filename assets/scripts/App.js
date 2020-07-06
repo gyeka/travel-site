@@ -1,7 +1,10 @@
 /*
-import '/../css/style.css';
-*/
+import Person from './modules/Person';
 
-if (module.hot) {
-    module.hot.accept()
-}
+
+let john = new Person("john Doe", "blue");
+john.greet();
+var jane = new Person("jane smith", "pinky");
+jane.greet();*/
+
+/*class syntax*/

@@ -1,27 +1,54 @@
-header {
+.site-header {
     background: var(--color-blue);
-    opacity: .6;
-    display: grid;
-    height: 10vh
+    height: 8vh;
+
+    @include respond(medium) {
+        height: 10vh
+    }
 }
 
 .header--inner {
-    display: flex;
-    justify-content: center;
+    height: 100%;
 
     @include respond(medium) {
+        display: flex;
         margin: 0 10vw;
         align-items: center;
     }
 }
 
+.background {
+    background: #222;
+    display: grid;
+    transition: background .4s ease-in-out;
+    height: 70vh;
+
+
+}
+
+
+.site-header__menu-content {
+    opacity: 0;
+    transition: opacity .4s ease-in;
+
+    @include respond(medium) {
+        opacity: 1;
+        flex: 1;
+        display: block;
+    }
+}
+
 
 .nav-list {
-    display: none;
 
 
     &>li {
         list-style: none;
+        padding: 3.5rem 0;
+
+        @include respond(medium) {
+            margin-bottom: 0;
+        }
 
         &>a {
             color: #eee;
@@ -46,22 +73,33 @@ header {
 
 }
 
-
+.open {
+    opacity: 1;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    margin-bottom: 10rem;
+}
 
 
 .header-logo {
     display: inline-block;
+    height: 5.5vh;
 
-
-    @include respond(large) {
+    @include respond(medium) {
+        display: inline-block;
+        width: 12rem;
+        height: auto;
         flex: 1;
     }
 }
 
+
 .logo {
 
     background: var(--color-bluish);
-    padding: 2rem;
+    padding: 1rem;
+
 
     @include respond(large) {
         padding: 2em;
@@ -69,42 +107,78 @@ header {
 
 }
 
-nav {
-    flex: 1;
-
-}
 
 .hamburger {
-    display: inline-block;
+    right: 3rem;
+    transform: translateY(-1rem);
     position: absolute;
-    right: 2rem;
-    top: 3.5rem;
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 2px;
+        width: 4rem;
+        background: #eee;
+        transition: all .4s ease-in-out;
+
+    }
+
+    &__middle {
+        position: absolute;
+        height: 2px;
+        background: #eee;
+        border-radius: 10%;
+        width: 3rem;
+        transition: all .4s ease-in-out;
+        top: 1.5rem;
+        transform-origin: 0 50%;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        border-radius: 10%;
+        width: 2rem;
+        position: absolute;
+        background: #EEE;
+        transition: all .4s ease-in-out;
+        top: 3rem;
+
+    }
+
+    @include respond(small) {
+        top: 3rem;
+    }
 
     @include respond(medium) {
         display: none;
     }
+
+
 }
 
-.line {
+.hamburger.close {
+    &::before {
 
-    border: 2.5px solid #eee;
-    color: #eee;
-
-    &--1 {
-        width: 2rem;
+        transform: rotate(45deg);
+        transform-origin: 0 0;
     }
 
-    &--2 {
-        width: 3.5rem;
-        margin: 1rem 0;
+    .hamburger__middle {
+        opacity: 0;
+        width: 0;
     }
 
-    &--3 {
-        width: 5rem;
 
+    &::after {
+        transform: rotate(-45deg) scaleX(2);
+        transform-origin: 0 100%;
     }
 
-    @include respond(medium) {
-        display: none;
-    }
+
 }
