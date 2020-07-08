@@ -320,6 +320,11 @@ img {
   }
 }
 
+.features__header {
+  grid-column: 3/6;
+  background: salmon;
+}
+
 .features__wrapper {
   grid-column: 2/6;
 }

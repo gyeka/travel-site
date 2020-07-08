@@ -11,6 +11,22 @@
 
     }
 
+    &__header {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        margin: 0 auto 4rem auto;
+        justify-content: space-between;
+        width: 60vw;
+
+        @include respond(small) {
+            grid-column: 3/6;
+            width: 20vw;
+
+
+        }
+    }
+
     &__wrapper {
         grid-column: 2/6;
     }
