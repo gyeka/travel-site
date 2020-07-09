@@ -1,10 +1,26 @@
+.header-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
 .site-header {
-    background: var(--color-blue);
+    --text: salmon;
+    --text-inverse: #eee;
+    --background: var(--color-blue);
     height: 8vh;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--text);
 
     @include respond(medium) {
-        height: 10vh
+        height: 10vh;
+        opacity: 0.7;
     }
+
 }
 
 .header--inner {
@@ -50,6 +66,7 @@
 
         @include respond(medium) {
             margin-bottom: 0;
+
         }
 
         &>a {
@@ -65,6 +82,7 @@
         width: 60vw;
         justify-content: space-between;
         margin-left: 4rem;
+
 
     }
 
